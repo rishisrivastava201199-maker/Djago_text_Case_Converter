@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Templates</title>
+  </head>
+  <body>
+    <h1>This is my page</h1>
+    {{name}} and his {{age}} year old.
+    <form action="/analyze" method="get">
+      <textarea name="text" style="width:1200px; height:210px;"></textarea>
+      <input type="checkbox" name="removepunc"> Remove Punctuation<br>
+      <input type="checkbox" name="fullcaps"> Convert to Uppercase<br>
+      <input type="checkbox" name="removespaces"> Remove Extra Spaces<br>
+      <button type="submit">Analyze text</button>
+    </form>
+    {% if submitted_text %}
+      <h2>Your submit:</h2>
+      <p>{{submitted_text}}</p>
+    {% endif %}
+  </body>
+</html>
